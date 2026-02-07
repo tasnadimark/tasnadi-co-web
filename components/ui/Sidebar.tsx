@@ -3,6 +3,7 @@
 import { Globe, CreditCard, Settings, Menu, X } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/utils";
 
 const navItems = [
   { icon: Globe, label: "Sites", active: true },
@@ -18,7 +19,7 @@ export default function Sidebar() {
       {/* Mobile top bar */}
       <div className="flex items-center justify-between border-b border-border px-4 py-3 md:hidden">
         <Image
-          src="/logo.svg"
+          src={getAssetPath("/logo.svg")}
           alt="Tasnadi.co"
           width={120}
           height={24}
@@ -55,7 +56,7 @@ export default function Sidebar() {
       <aside className="hidden md:flex w-56 flex-col border-r border-border bg-background px-3 py-6">
         <div className="mb-8 px-3">
           <Image
-            src="/logo.svg"
+            src={getAssetPath("/logo.svg")}
             alt="Tasnadi.co"
             width={120}
             height={24}
